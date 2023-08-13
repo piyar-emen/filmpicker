@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+:root {
+  --mainColor: #7161ef;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background: linear-gradient(180deg, #838383, #52525238);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer {
+  background: linear-gradient(180deg, #52525238, #838383);
+  height: 7vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card {
+  --bs-card-border-color: #7161ef !important;
+  --bs-border-width: 2px !important;
+}
+
+.loading-spinner {
+  color: var(--mainColor);
+  width: 8rem !important;
+  height: 8rem !important;
+}
+
+.navbar-item {
+  position: relative !important;
   color: white;
+  background-color: transparent !important;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+/* Animation of navbar items Start */
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  right: 100%;
+  background-color: var(--mainColor);
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-item:hover::after {
+  visibility: visible;
+  right: 0;
+  transform: scale(1);
+}
+
+/* Animation of navbar items End */
+
+
+.navbar-brand,
+.link {
+  color: var(--mainColor) !important;
+}
+
+.navbar-brand::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-area:hover .navbar-brand::after {
+  visibility: visible;
+  transform: scale(1.2);
+}
+
+.search-btn,
+.nextPageButton,
+.previousPageButton,
+.categoryButton {
+  background-color: var(--mainColor) !important;
+  color: white !important;
+}
+
+.search-btn:hover,
+.categoryButton:hover {
+  background-color: white !important;
+  color: var(--mainColor) !important;
+  border-color: var(--mainColor) !important;
+  border-width: 1px !important;
+}
+
+/* .searchbox {
+  width: 30vw;
+} */
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+
+.searchbox:focus,
+.searchbox:active {
+  box-shadow: 0px 0px 5px 3px var(--mainColor) !important;
+}
+
+/* .rated-films {
+  width: 20%;
+} */
+
+.filmcard-overview {
+  height: 30vh !important;
+  /* max-height: 35vh !important; */
+  overflow-y: auto !important;
+  /* padding-top: 0 !important; */
+  /* padding-bottom: 0px; */
+}
+
+.video, .modal-img {
+  width: 90% !important;
+  height: 40vh !important;
+}
+
+.filmmodal-overview {
+  height: 60vh !important;
+  max-height: 65vh !important;
+  overflow-y: auto !important;
+  /* padding-top: 0 !important; */
+  /* padding-bottom: 0px; */
+}
+
+.filmcard-img {
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.filmcard-img:hover {
+  transform: scale(1.1);
+}
+
+.details-link {
+  color: var(--mainColor) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.details-link:hover {
+  margin-right: 0.3rem !important;
+}
+
+.play-icon {
+  color: var(--mainColor) !important;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+}
+
+.modal-content {
+  border-width: 3px !important;
+  border-color: var(--mainColor) !important;
+}
+
+.modal-header {
+  border-width: 2px !important;
+  border-color: var(--mainColor) !important;
+  padding: .2rem 1rem !important;
+}
+
+.h5,
+.modal-title {
+  font-size: 1.1rem;
+}
+
+.navbar-toggler {
+  padding: 2px !important;
+  --bs-navbar-toggler-border-color: var(--mainColor) !important;
+}
+
+.navbar-toggler-icon {
+  width: 25px !important;
+  height: 25px !important;
+  color: var(--mainColor)
+}
+
+.navbar-toggler:focus {
+  --bs-navbar-toggler-focus-width: 2px !important;
+  color: var(--mainColor) !important;
+}
+
+.basis1 {
+  flex-basis: calc(25% - 1rem);
+}
+
+@media only screen and (max-width: 768px) {
+  .basis1 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-basis: 100% !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .dropdownWidth {
+    width: 100% !important;
+  }
+
+  .video, .modal-img {
+    width: 90% !important;
+    height: 20vh !important;
   }
 }
