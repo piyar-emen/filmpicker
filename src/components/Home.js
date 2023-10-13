@@ -144,8 +144,8 @@ function Home() {
                                             {
                                                 page > 1 &&
                                                 <Button className="previousPageButton w-25 ms-2 d-flex align-items-center justify-content-center" onClick={previousTopRated}>
-                                                    <span className='me-2'>{constant.en.previousPage}</span>
                                                     <FontAwesomeIcon icon={faArrowLeft} />
+                                                    <span className='me-2'>{constant.en.previousPage}</span>
                                                 </Button>
                                             }
                                             <Button className="nextPageButton w-25 ms-2 d-flex align-items-center justify-content-center" onClick={nextTopRated}>
