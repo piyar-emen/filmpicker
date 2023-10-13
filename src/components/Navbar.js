@@ -103,7 +103,7 @@ function Navbar() {
 
     return (
         <header className='header'>
-            <RBNavbar collapseOnSelect expand='lg' className='p-0'>
+            <RBNavbar collapseOnSelect expand='lg' className='p-0 pt-2'>
                 <Container>
                     <div className='w-100 d-lg-flex align-items-baseline'>
                         <div className='d-flex justify-content-between'>
