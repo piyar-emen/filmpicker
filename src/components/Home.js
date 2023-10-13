@@ -156,9 +156,9 @@ function Home() {
                                         <div className='d-flex justify-content-center'>
                                             {
                                                 page > 1 &&
-                                                <Button className="nextPageButton w-25 ms-2 d-flex align-items-center justify-content-center" onClick={previousTopRated}>
-                                                    <span className='me-2'>{constant.tr.previousPage}</span>
+                                                <Button className="previousPageButton w-25 ms-2 d-flex align-items-center justify-content-center" onClick={previousTopRated}>
                                                     <FontAwesomeIcon icon={faArrowLeft} />
+                                                    <span className='ms-2'>{constant.tr.previousPage}</span>
                                                 </Button>
                                             }
                                             <Button className="nextPageButton w-25 d-flex align-items-center justify-content-center ms-2" onClick={nextTopRated}>
